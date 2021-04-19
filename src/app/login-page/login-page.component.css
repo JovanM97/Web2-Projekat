@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.split {
+    height: 50%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 220px;
+    overflow-x: hidden;
+    
+}
+
+/* Control the left side */
+.left {
+    left: 180px;
+    padding-right: 150px;
+    padding-bottom: 200px;
+    /*background-image: url("/src/assets/thunder-tree.jpg");*/
+}
+  
+/* Control the right side */
+.right {
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    right: 250px;
+    width: 350px;
+    background-color: lightblue;
+}
+
+button {
+    height: 70px;
+    width: 170px;
+    color: gray;
+    background-color: white;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
