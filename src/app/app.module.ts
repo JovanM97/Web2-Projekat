@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import { WidgetComponent } from './widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     RegisterPageComponent,
     SidebarComponent,
     TopBarComponent,
+    DashboardPageComponent,
+    WidgetComponent,
   ],
   imports: [
     BrowserModule,
