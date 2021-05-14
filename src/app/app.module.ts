@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { WidgetComponent } from './widget/widget.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { WidgetComponent } from './widget/widget.component';
     TopBarComponent,
     DashboardPageComponent,
     WidgetComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
