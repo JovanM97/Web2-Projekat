@@ -14,6 +14,7 @@ import { WidgetComponent } from './widget/widget.component';
 import { ChartComponent } from './chart/chart.component';
 import { WorkRequestPageComponent } from './work-request-page/work-request-page.component';
 import { TableComponent } from './table/table.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TableComponent } from './table/table.component';
     ChartComponent,
     WorkRequestPageComponent,
     TableComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
