@@ -12,6 +12,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { WidgetComponent } from './widget/widget.component';
 import { ChartComponent } from './chart/chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ChartComponent } from './chart/chart.component';
     DashboardPageComponent,
     WidgetComponent,
     ChartComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,
