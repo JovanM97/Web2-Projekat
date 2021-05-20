@@ -7,6 +7,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { WorkRequestPageComponent } from './work-request-page/work-request-page.component';
 import { IncidentPageComponent } from './incident-page/incident-page.component';
+import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterPageComponent},
   {path: 'dashboard', component: DashboardPageComponent},
   {path: 'workRequest', component: WorkRequestPageComponent},
-  {path: 'incidents', component: IncidentPageComponent}
+  {path: 'incidents', component: IncidentPageComponent},
+  {path: 'addIncidents', component: AddIncidentPageComponent}
 ];
 
 @NgModule({
