@@ -18,6 +18,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { IncidentPageComponent } from './incident-page/incident-page.component';
 import { IncidentNavComponent } from './incident-nav/incident-nav.component';
 import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.component';
+import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic-info.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.
     IncidentPageComponent,
     IncidentNavComponent,
     AddIncidentPageComponent,
+    IncidentBasicInfoComponent,
   ],
   imports: [
     BrowserModule,
