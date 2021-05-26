@@ -11,6 +11,8 @@ import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.
 import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic-info.component';
 import { IncidentDevicesComponent } from './incident-devices/incident-devices.component';
 import { IncidentCallsComponent } from './incident-calls/incident-calls.component';
+import { IncidentResolutionComponent } from './incident-resolution/incident-resolution.component';
+
 
 const routes: Routes = [
   {path: '', component: LoginPageComponent},
@@ -24,6 +26,7 @@ const routes: Routes = [
       {path: '', component: IncidentBasicInfoComponent},
       {path: 'incBasicInfo', component: IncidentBasicInfoComponent},
       {path: 'incDevices', component: IncidentDevicesComponent},
+      {path: 'incResolution', component: IncidentResolutionComponent},
       {path: 'incCalls', component: IncidentCallsComponent},
 
     ]
