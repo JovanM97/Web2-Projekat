@@ -19,6 +19,7 @@ import { IncidentPageComponent } from './incident-page/incident-page.component';
 import { IncidentNavComponent } from './incident-nav/incident-nav.component';
 import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.component';
 import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic-info.component';
+import { IncidentDevicesComponent } from './incident-devices/incident-devices.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic
     IncidentNavComponent,
     AddIncidentPageComponent,
     IncidentBasicInfoComponent,
+    IncidentDevicesComponent,
   ],
   imports: [
     BrowserModule,
