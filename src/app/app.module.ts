@@ -20,6 +20,7 @@ import { IncidentNavComponent } from './incident-nav/incident-nav.component';
 import { AddIncidentPageComponent } from './add-incident-page/add-incident-page.component';
 import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic-info.component';
 import { IncidentDevicesComponent } from './incident-devices/incident-devices.component';
+import { IncidentCallsComponent } from './incident-calls/incident-calls.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { IncidentDevicesComponent } from './incident-devices/incident-devices.co
     AddIncidentPageComponent,
     IncidentBasicInfoComponent,
     IncidentDevicesComponent,
+    IncidentCallsComponent,
   ],
   imports: [
     BrowserModule,
