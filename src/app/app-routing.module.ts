@@ -12,6 +12,7 @@ import { IncidentBasicInfoComponent } from './incident-basic-info/incident-basic
 import { IncidentDevicesComponent } from './incident-devices/incident-devices.component';
 import { IncidentCallsComponent } from './incident-calls/incident-calls.component';
 import { IncidentResolutionComponent } from './incident-resolution/incident-resolution.component';
+import { IncAddCallsComponent } from './inc-add-calls/inc-add-calls.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
       {path: 'incDevices', component: IncidentDevicesComponent},
       {path: 'incResolution', component: IncidentResolutionComponent},
       {path: 'incCalls', component: IncidentCallsComponent},
+      {path: 'incAddCalls', component: IncAddCallsComponent},
 
     ]
 }

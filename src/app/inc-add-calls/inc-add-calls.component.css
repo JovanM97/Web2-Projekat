@@ -1,0 +1,24 @@
+select{
+    font-size: 20px;
+}
+
+table.inline  {
+    display:inline-table;
+    vertical-align:top; /* or else as your needs */
+    }
+
+.border{
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.text {
+    width: 500px;
+}
+@media screen and (max-width: 1200px) {
+    
+    
+    .text {
+        width: 250px;
+    }
+}
