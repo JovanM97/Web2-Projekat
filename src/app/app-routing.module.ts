@@ -16,6 +16,7 @@ import { IncAddCallsComponent } from './inc-add-calls/inc-add-calls.component';
 import { SafetyDocPageComponent } from './safety-doc-page/safety-doc-page.component';
 import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component';
 import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-basic-info.component';
+import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-checklist.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
     children: [
       {path: '', component: SafetyDocBasicInfoComponent},
       {path: 'safetyDocBasicInfo', component: SafetyDocBasicInfoComponent},
+      {path: 'safetyDocChecklist', component: SafetyDocChecklistComponent},
     ]}
 ];
 

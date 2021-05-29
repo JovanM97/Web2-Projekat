@@ -27,6 +27,7 @@ import { SafetyDocPageComponent } from './safety-doc-page/safety-doc-page.compon
 import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component';
 import { SafetyDocNavComponent } from './safety-doc-nav/safety-doc-nav.component';
 import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-basic-info.component';
+import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-checklist.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-
     AddSafetyDocComponent,
     SafetyDocNavComponent,
     SafetyDocBasicInfoComponent,
+    SafetyDocChecklistComponent,
   ],
   imports: [
     BrowserModule,
