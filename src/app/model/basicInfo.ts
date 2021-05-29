@@ -5,7 +5,7 @@ enum IncidentType {
     UNPLANNED
 }
 
-export class BasicInfo {
+export class IncBasicInfo {
 
     private Id: string;
     private IncidentT: IncidentType;

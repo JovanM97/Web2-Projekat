@@ -26,6 +26,7 @@ import { IncAddCallsComponent } from './inc-add-calls/inc-add-calls.component';
 import { SafetyDocPageComponent } from './safety-doc-page/safety-doc-page.component';
 import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component';
 import { SafetyDocNavComponent } from './safety-doc-nav/safety-doc-nav.component';
+import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-basic-info.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { SafetyDocNavComponent } from './safety-doc-nav/safety-doc-nav.component
     SafetyDocPageComponent,
     AddSafetyDocComponent,
     SafetyDocNavComponent,
+    SafetyDocBasicInfoComponent,
   ],
   imports: [
     BrowserModule,

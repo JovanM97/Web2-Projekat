@@ -1,0 +1,8 @@
+select{
+    font-size: 20px;
+}
+
+table.inline  {
+    display:inline-table;
+    vertical-align:top; /* or else as your needs */
+    }

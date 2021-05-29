@@ -28,7 +28,7 @@ enum Material {
     CONCRETE
 }
 
-export class Resolution {
+export class IncResolution {
 
     private cause: Cause;
     private subCause: SubCause;
