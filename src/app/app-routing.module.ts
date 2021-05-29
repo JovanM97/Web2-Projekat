@@ -13,6 +13,8 @@ import { IncidentDevicesComponent } from './incident-devices/incident-devices.co
 import { IncidentCallsComponent } from './incident-calls/incident-calls.component';
 import { IncidentResolutionComponent } from './incident-resolution/incident-resolution.component';
 import { IncAddCallsComponent } from './inc-add-calls/inc-add-calls.component';
+import { SafetyDocPageComponent } from './safety-doc-page/safety-doc-page.component';
+import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component';
 
 
 const routes: Routes = [
@@ -31,8 +33,9 @@ const routes: Routes = [
       {path: 'incCalls', component: IncidentCallsComponent},
       {path: 'incAddCalls', component: IncAddCallsComponent},
 
-    ]
-}
+    ]},
+  {path: 'safetyDoc', component: SafetyDocPageComponent},
+  {path: 'addSafetyDoc', component: AddSafetyDocComponent}
 ];
 
 @NgModule({
