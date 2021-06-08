@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserCacheService } from '../Services/user-cache.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+  public username : string;
+
+  constructor(private user : UserCacheService) {
+    if(localStorage["role"] != null){
+      this.username = localStorage["username"]
+    }
+   }
 
   ngOnInit(): void {
   }

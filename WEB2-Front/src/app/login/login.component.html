@@ -1,13 +1,24 @@
-<label><b>Email Address:</b></label>
-<br>
-<input class="input" type="text" placeholder="example@email.com">
-<br><br>
-<label><b>Password:</b></label>
-<br>
-<input class="input" type="password" placeholder="Password">
-<br><br>
-<a>Forgot your password?</a>
-<br>
-<button class="login"> Login </button>
-<br><br>
-<a routerLink="/register" > Create account </a>
+<div>
+    <form (submit)="onSubmit()" [formGroup]="loginForm">
+        <label><b>Email Address:</b></label>
+        <br>
+        <input [ngClass] ="{'is-invalid': loginForm.get('username').touched && loginForm.get('username').invalid}" class="input" type="text" placeholder="example@email.com" formControlName="username">
+        <div class="invalid-feedback">
+            <div ><i class="fas fa-times-circle" style="color: red;"> Username is required.</i></div>
+        </div>
+        <br><br>
+        <label><b>Password:</b></label>
+        <br>
+        <input [ngClass] ="{'is-invalid': loginForm.get('password').touched && loginForm.get('password').invalid}" class="input" type="password" placeholder="Password" formControlName="password">
+        <div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid" class="invalid-feedback">
+            <div *ngIf="loginForm.get('password').errors.required" ><i class="fas fa-times-circle" style="color: red;"> Password is required.</i></div>
+            <div *ngIf="loginForm.get('password').errors.minlength"><i class="fas fa-times-circle" style="color: red;"> Password must be at least 8 characters long.</i></div>
+        </div>
+        <br><br>
+        <a>Forgot your password?</a>
+        <br>
+        <button type="submit" class="login"> Login </button>
+        <br><br>
+        <a routerLink="/register" > Create account </a>
+    </form>
+</div>

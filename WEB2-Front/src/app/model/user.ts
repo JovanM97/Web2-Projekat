@@ -1,7 +1,8 @@
-enum UserType {
+export enum UserType {
     CREW_MEMBER,
     DISPATCHER,
-    ATH_WORKER
+    ATH_WORKER,
+    ADMIN
 }
 
 export class User {
@@ -15,16 +16,7 @@ export class User {
     private birthday: Date;
     private userT: UserType;
     
-    constructor($userName: string, $email: string, $password: string, $name: string, $lastName: string, $address: string, $birthday: Date, $userT: UserType) {
-        this.userName = $userName;
-        this.email = $email;
-        this.password = $password;
-        this.name = $name;
-        this.lastName = $lastName;
-        this.address = $address;
-        this.birthday = $birthday;
-        this.userT = $userT;
-    }
+    constructor() {}
     
     public getUserName(): string {
         return this.userName;
