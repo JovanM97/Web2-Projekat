@@ -9,6 +9,7 @@ import { UserCacheService } from '../Services/user-cache.service';
 export class TopBarComponent implements OnInit {
 
   public username : string;
+  public headline : string;
 
   constructor(private user : UserCacheService) {
     if(localStorage["role"] != null){
@@ -17,6 +18,7 @@ export class TopBarComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.headline = localStorage.getItem('headline')
   }
 
 }

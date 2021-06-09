@@ -10,6 +10,7 @@ export class AddIncidentPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("headline", "Incidents-New");
   }
 
 }

@@ -10,6 +10,7 @@ export class DashboardPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("headline", "Dashboard");
   }
 
 }

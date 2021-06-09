@@ -10,6 +10,7 @@ export class WorkRequestPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("headline", "Work requests");
   }
 
 }

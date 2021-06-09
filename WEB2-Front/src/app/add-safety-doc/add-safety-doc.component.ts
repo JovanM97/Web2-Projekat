@@ -10,6 +10,7 @@ export class AddSafetyDocComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("headline", "Safety Documents-New");
   }
 
 }
