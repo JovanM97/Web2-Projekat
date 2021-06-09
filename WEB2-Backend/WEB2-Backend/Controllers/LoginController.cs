@@ -45,13 +45,14 @@ namespace WEB2_Backend.Controllers
             //if (string.IsNullOrWhiteSpace(credentials.Password))
             //    return BadRequest(new { message = "Password not supplied" });
 
-            String[] retVal = await service.Login(credentials.Username, credentials.Password);
+            String[] retVal = await service.Login(credentials.Email, credentials.Password);
             String token = retVal[0];
             String msg = retVal[1];
+            String username = retVal[2];
 
             if (!token.Equals("Error"))
             {
-                return Ok(new { token, msg });
+                return Ok(new { token, msg, username });
             }
             else
             {

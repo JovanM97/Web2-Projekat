@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -29,10 +30,15 @@ namespace WEB2_Backend.Service.Login
             this.unitOfWork = unitOfWork;
         }
 
-        public async Task<string[]> Login(string username, string password)
+        public async Task<string[]> Login(string email, string password)
         {
             string[] ret;
-            User loginUser = checkUser(username, password);
+            if (!new EmailAddressAttribute().IsValid(email))
+            {
+                ret = new string[] { "Error", "Email format is incorrect." };
+                return ret;
+            }
+            User loginUser = checkUser(email, password);
 
             if (loginUser != null)
             {
@@ -43,7 +49,7 @@ namespace WEB2_Backend.Service.Login
                         return "";*/
 
                     string token = tokenService.generateToken(loginUser, this.appSettings);
-                    ret = new string[] { token, loginUser.UserT.ToString() };
+                    ret = new string[] { token, loginUser.UserT.ToString(), loginUser.Username };
                 }
                 else
                     ret = new string[] { "Error", "The account is not active." };
@@ -52,19 +58,19 @@ namespace WEB2_Backend.Service.Login
             }
             else
             {
-                ret = new string[] { "Error", "Username or password is incorrect." };
+                ret = new string[] { "Error", "Email or password is incorrect." };
                 return ret;
 
             }
 
         }
 
-        private User checkUser(string username, string password)
+        private User checkUser(string email, string password)
         {
             var AllUser = unitOfWork.UserRepository.GetAll();
             foreach (var temp in AllUser)
             {
-                if (temp.Username == username && temp.Password == password)
+                if (temp.Email == email && temp.Password == password)
                     return temp;
             }
             return null;

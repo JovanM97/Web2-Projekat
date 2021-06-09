@@ -26,21 +26,22 @@ export class LoginComponent implements OnInit {
 
   setForm(){
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
       password: new FormControl('', [Validators.required, Validators.minLength(8)])
   
     })
   }
 
   onSubmit() {
-    let user = new LoginModel(this.loginForm.value.username, this.loginForm.value.password)
+    let user = new LoginModel(this.loginForm.value.email, this.loginForm.value.password)
     this.service.SpecifiedUrl="Login/Login";
 
     this.service.Login(user).subscribe((data) => { 
         
-      localStorage.setItem("nettoken",data.token)
-      localStorage.setItem("role",data.msg)
-      localStorage.setItem('username',user.username);
+      localStorage.setItem("nettoken",data.token);
+      localStorage.setItem("role",data.msg);
+      localStorage.setItem("username",data.username);
+      localStorage.setItem('email',user.email);
       console.log(data.firstLoggin);
        this.router.navigate(['dashboard'])
        this.service.checkTheRole();
