@@ -30,6 +30,8 @@ import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component
 import { SafetyDocNavComponent } from './safety-doc-nav/safety-doc-nav.component';
 import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-basic-info.component';
 import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-checklist.component';
+import { EquipmentPageComponent } from './equipment-page/equipment-page.component';
+import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-c
     SafetyDocNavComponent,
     SafetyDocBasicInfoComponent,
     SafetyDocChecklistComponent,
+    EquipmentPageComponent,
+    AddEquipmentComponent,
   ],
   imports: [
     BrowserModule,

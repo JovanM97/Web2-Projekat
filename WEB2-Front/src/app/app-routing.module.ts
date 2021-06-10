@@ -17,6 +17,8 @@ import { SafetyDocPageComponent } from './safety-doc-page/safety-doc-page.compon
 import { AddSafetyDocComponent } from './add-safety-doc/add-safety-doc.component';
 import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-basic-info.component';
 import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-checklist.component';
+import { EquipmentPageComponent } from './equipment-page/equipment-page.component';
+import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
 
 
 const routes: Routes = [
@@ -42,7 +44,9 @@ const routes: Routes = [
       {path: '', component: SafetyDocBasicInfoComponent},
       {path: 'safetyDocBasicInfo', component: SafetyDocBasicInfoComponent},
       {path: 'safetyDocChecklist', component: SafetyDocChecklistComponent},
-    ]}
+    ]},
+  {path: 'equipment', component: EquipmentPageComponent},
+  {path: 'addEquipment', component: AddEquipmentComponent},
 ];
 
 @NgModule({

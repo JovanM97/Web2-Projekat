@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   setForm(){
     this.loginForm = new FormGroup({
       email: new FormControl('', Validators.required),
-      password: new FormControl('', [Validators.required, Validators.minLength(8)])
+      password: new FormControl('', [Validators.required, Validators.minLength(7)])
   
     })
   }
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
      },
      (error) => {
        console.log(error);
-       alert("Proverite podatke")
+       alert("Email or password incorrect.")
      },
      () => {
        console.log('complete');

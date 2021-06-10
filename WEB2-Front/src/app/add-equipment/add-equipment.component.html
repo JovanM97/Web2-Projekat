@@ -1,0 +1,43 @@
+<app-top-bar></app-top-bar>
+<app-sidebar></app-sidebar>
+<div style="margin-left: 200px; width: 350px;">
+    <form (submit)="onSubmit()" [formGroup]="equipmentForm">
+        <table style="font-size: 20px;">
+            <tr>
+                <td>Type: </td>
+                <td>
+                    <select style="width: 220px;" formControlName="Type">
+                        <option value="SWITCH">Switch</option>
+                        <option value="FUSE">Fuse</option>
+                        <option value="TRANSFORMER">Transformer</option>
+                        <option value="DISCONNECTOR">Disconnector</option>
+                    </select>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>ID: </td>
+                <td><label>{{EqId}}</label></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Name: </td>
+                <td><label>{{name}}</label></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Address: </td>
+                <td><input style="font-size: 20px;" type="text" formControlName="Address"></td>
+            </tr>
+            <br>
+            <tr>
+                <td>Coordinates: &nbsp;&nbsp;&nbsp;</td>
+                <td><input style="font-size: 20px;" type="text" formControlName="Coordinates"></td>
+            </tr>
+            <br>
+        </table>
+        <hr>
+        <button class="button" style="height: 50px; width: 150px;font-size: 20px;" type="submit">Add</button>
+        <button class="button" style="height: 50px; width: 150px;font-size: 20px;margin-left: 50px;" routerLink="/equipment">Cancel</button>
+    </form>
+</div>
