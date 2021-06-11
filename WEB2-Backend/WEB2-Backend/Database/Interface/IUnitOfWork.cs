@@ -9,6 +9,7 @@ namespace WEB2_Backend.Database.Interface
     public interface IUnitOfWork : IDisposable
     {
         UserRepository UserRepository { get; }
+        EquipmentRepository EquipmentRepository { get; }
 
 
         int Complete();

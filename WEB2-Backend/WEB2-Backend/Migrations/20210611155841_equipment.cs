@@ -3,10 +3,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WEB2_Backend.Migrations
 {
-    public partial class login : Migration
+    public partial class equipment : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Equipments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EqType = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Coordinates = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    isDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Equipments", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -31,6 +48,17 @@ namespace WEB2_Backend.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Equipments",
+                columns: new[] { "Id", "Address", "Coordinates", "EqType", "Name", "isDeleted" },
+                values: new object[,]
+                {
+                    { 1, "Masarikova 12", "None", 0, "SW1", false },
+                    { 2, "Masarikova 12", "None", 2, "TR1", false },
+                    { 3, "Cara Dusana 50", "None", 1, "FU1", false },
+                    { 4, "Cara Dusana 90", "None", 3, "DI1", false }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Address", "Birthday", "Email", "Image", "IsDeleted", "LastName", "Name", "Password", "UserT", "Username", "isActive" },
                 values: new object[,]
@@ -44,6 +72,9 @@ namespace WEB2_Backend.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Equipments");
+
             migrationBuilder.DropTable(
                 name: "Users");
         }

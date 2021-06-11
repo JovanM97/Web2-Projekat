@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import { EquipmentModel } from '../model/equipmentModel';
+import { TokenModel } from '../model/TokenModel';
+import { UserNetworkService } from './user-network.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EquipmentService {
+export class EquipmentService extends UserNetworkService<EquipmentModel>{
   
-  
-  addEquipment(equipment : EquipmentModel) : EquipmentModel {
-    throw new Error('Method not implemented.');
+  checkId() {
+    this.SpecifiedUrl="Equipment/CheckId";
+    return this.client.get<number>(this.BaseUri + this.SpecifiedUrl);
   }
-
-  constructor() { }
+  
+  
+  addEquipment(equipment : EquipmentModel) {
+    this.SpecifiedUrl="Equipment/AddEquipment";
+    return this.client.post<TokenModel>(this.BaseUri + this.SpecifiedUrl, equipment);
+  }
 }

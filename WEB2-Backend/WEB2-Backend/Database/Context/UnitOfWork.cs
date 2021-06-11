@@ -12,11 +12,13 @@ namespace WEB2_Backend.Database.Context
         private readonly AppDbContext _context;
 
         public UserRepository UserRepository { get; set; }
+        public EquipmentRepository EquipmentRepository { get; set; }
 
         public UnitOfWork(AppDbContext options)
         {
             _context = options;
             UserRepository = new UserRepository(_context);
+            EquipmentRepository = new EquipmentRepository(_context);
         }
 
 

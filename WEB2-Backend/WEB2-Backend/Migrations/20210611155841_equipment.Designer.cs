@@ -10,8 +10,8 @@ using WEB2_Backend.Database.Context;
 namespace WEB2_Backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210608162925_login")]
-    partial class login
+    [Migration("20210611155841_equipment")]
+    partial class equipment
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,71 @@ namespace WEB2_Backend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("WEB2_Backend.Model.Equipment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Coordinates")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EqType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Equipments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Masarikova 12",
+                            Coordinates = "None",
+                            EqType = 0,
+                            Name = "SW1",
+                            isDeleted = false
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Masarikova 12",
+                            Coordinates = "None",
+                            EqType = 2,
+                            Name = "TR1",
+                            isDeleted = false
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "Cara Dusana 50",
+                            Coordinates = "None",
+                            EqType = 1,
+                            Name = "FU1",
+                            isDeleted = false
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Address = "Cara Dusana 90",
+                            Coordinates = "None",
+                            EqType = 3,
+                            Name = "DI1",
+                            isDeleted = false
+                        });
+                });
 
             modelBuilder.Entity("WEB2_Backend.Model.User", b =>
                 {

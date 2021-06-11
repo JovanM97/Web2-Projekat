@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using WEB2_Backend.Database.Context;
 using WEB2_Backend.Database.Interface;
 using WEB2_Backend.Model;
+using WEB2_Backend.Service.Account;
 
 namespace WEB2_Backend.Service.Login
 {
@@ -21,6 +22,7 @@ namespace WEB2_Backend.Service.Login
         private IUnitOfWork unitOfWork;
         private AppSettings appSettings;
         TokenService tokenService;
+        ValidateService validateService;
 
         public LoginService(AppSettings appSettings, IUnitOfWork unitOfWork)
         {
@@ -28,12 +30,13 @@ namespace WEB2_Backend.Service.Login
             this.appSettings = appSettings;
             tokenService = new TokenService();
             this.unitOfWork = unitOfWork;
+            validateService = new ValidateService();
         }
 
         public async Task<string[]> Login(string email, string password)
         {
             string[] ret;
-            if (!new EmailAddressAttribute().IsValid(email))
+            if (!validateService.ValidateEmail(email))
             {
                 ret = new string[] { "Error", "Email format is incorrect." };
                 return ret;

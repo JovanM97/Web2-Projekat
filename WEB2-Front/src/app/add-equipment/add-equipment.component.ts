@@ -13,10 +13,10 @@ import { EquipmentService } from '../Services/equipment.service';
 export class AddEquipmentComponent implements OnInit {
 
   equipmentForm : FormGroup;
-  EqId : string = "00010"
+  EqId : number = 10;
   type : string = "SW"
   name : string = this.type + this.EqId
-  temp : EquipmentModel;
+  temp : EquipmentModel = new EquipmentModel;
 
   constructor(private service : EquipmentService, private router : Router, private activeRoute : ActivatedRoute) { }
 
@@ -24,11 +24,17 @@ export class AddEquipmentComponent implements OnInit {
   ngOnInit(): void {
     localStorage.setItem("headline", "Equipment-New");
     this.setForm();
+    this.service.checkId().subscribe(
+      (data) => {
+        this.EqId = data;
+        this.name = this.type + this.EqId;
+      }
+    );
   }
 
   setForm(){
     this.equipmentForm = new FormGroup({
-      Type: new FormControl('', Validators.required),
+      Type: new FormControl( Validators.required),
       Address: new FormControl('', [Validators.required]),
       Coordinates: new FormControl('', [Validators.required])
     })
@@ -41,6 +47,17 @@ export class AddEquipmentComponent implements OnInit {
     this.temp.address = this.equipmentForm.value.Address;
     this.temp.coordinates = this.equipmentForm.value.Coordinates;
     
-    this.service.addEquipment(this.temp)
+    this.service.addEquipment(this.temp).subscribe(
+      (data) => {
+        if (data.token == "success"){
+          console.log("Success");
+          this.router.navigate(['equipment'])
+        }
+      },(error) =>
+      {
+        console.log(error);
+       alert("Error adding equipment.")
+      }
+    );
   }
 }

@@ -20,5 +20,14 @@ namespace WEB2_Backend.Service.Account
         {
             return value1.Equals(value2);//&&value1!=null && !value1.Equals(string.Empty)&&value2 != null && !value2.Equals(string.Empty);
         }
+
+        internal bool ValidateEquipment(Model.Equipment data)
+        {
+            if (data.Address == null || data.Address.Equals(String.Empty))
+                return false;
+            if (data.Coordinates == null || data.Coordinates.Equals(String.Empty))
+                return false;
+            return true;
+        }
     }
 }
