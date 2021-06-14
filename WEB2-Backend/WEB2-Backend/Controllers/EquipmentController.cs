@@ -24,6 +24,13 @@ namespace WEB2_Backend.Controllers
             service = new EquipmentService(UOW);
         }
 
+        [HttpGet]
+        [Route("GetAllEquipment")]
+        public ICollection<EquipmentResponse> GetAllEquipment()
+        {
+            return service.GetAllEquipment();
+        }
+
         [HttpPost]
         //[Authorize]
         [Route("AddEquipment")]

@@ -41,7 +41,7 @@ export class AddEquipmentComponent implements OnInit {
   }
 
   onSubmit(){
-    this.temp.type = this.equipmentForm.value.Type;
+    this.temp.eqType = this.equipmentForm.value.Type;
     this.temp.id = this.EqId;
     this.temp.name = this.name;
     this.temp.address = this.equipmentForm.value.Address;

@@ -1,0 +1,20 @@
+<div class="outer">
+    <div class="inner">
+        <table>
+            <tr>
+                <th class="hard_left">Id</th>
+                <th class="next_left">Name</th>
+                <th>Type</th>
+                <th>Address</th>
+                <th>Coordinates</th>
+            </tr>
+            <tr *ngFor="let eq of Equipments">
+                <th class="hard_left">{{eq.id}}</th>
+                <td class="next_left">{{eq.name}}</td>
+                <td class="long">{{eq.eqType}}</td>
+                <td class="long">{{eq.address}}</td>
+                <td class="long">{{eq.coordinates}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
