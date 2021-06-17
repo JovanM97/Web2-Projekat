@@ -9613,23 +9613,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Srdjan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\WEB2-Project2021\\WEB2-Backend\\WEB2-Backend\\WEB2-Backend.csproj",
+      "projectUniqueName": "C:\\Users\\Srdjan\\Desktop\\Web2-Projekat\\WEB2-Backend\\WEB2-Backend\\WEB2-Backend.csproj",
       "projectName": "WEB2-Backend",
-      "projectPath": "C:\\Users\\User\\WEB2-Project2021\\WEB2-Backend\\WEB2-Backend\\WEB2-Backend.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\WEB2-Project2021\\WEB2-Backend\\WEB2-Backend\\obj\\",
+      "projectPath": "C:\\Users\\Srdjan\\Desktop\\Web2-Projekat\\WEB2-Backend\\WEB2-Backend\\WEB2-Backend.csproj",
+      "packagesPath": "C:\\Users\\Srdjan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Srdjan\\Desktop\\Web2-Projekat\\WEB2-Backend\\WEB2-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Srdjan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
