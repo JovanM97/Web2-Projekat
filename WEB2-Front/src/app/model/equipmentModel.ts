@@ -1,5 +1,5 @@
 export class EquipmentModel {
-    type:string;
+    eqType:string;
     id:number;
     name:string;
     address:string;

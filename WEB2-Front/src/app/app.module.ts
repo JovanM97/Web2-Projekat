@@ -32,6 +32,12 @@ import { SafetyDocBasicInfoComponent } from './safety-doc-basic-info/safety-doc-
 import { SafetyDocChecklistComponent } from './safety-doc-checklist/safety-doc-checklist.component';
 import { EquipmentPageComponent } from './equipment-page/equipment-page.component';
 import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
+import { EquipmentTableComponent } from './equipment-table/equipment-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -63,13 +69,20 @@ import { AddEquipmentComponent } from './add-equipment/add-equipment.component';
     SafetyDocChecklistComponent,
     EquipmentPageComponent,
     AddEquipmentComponent,
+    EquipmentTableComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

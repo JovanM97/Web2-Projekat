@@ -45,6 +45,31 @@ namespace WEB2_Backend.Service.Equipment
             return true;
         }
 
+        internal ICollection<Model.EquipmentResponse> GetAllEquipment()
+        {
+            ICollection<Model.Equipment> ret = null;
+            List<Model.EquipmentResponse> ret2 = new List<EquipmentResponse>();
+            ret = unitOfWork.EquipmentRepository.GetAll().ToList();
+            if (ret == null)
+                return null;
+            else
+            {
+                foreach (var item in ret)
+                {
+                    EquipmentResponse er = new EquipmentResponse()
+                    {
+                        Id = item.Id,
+                        Name = item.Name,
+                        EqType = item.EqType.ToString(),
+                        Address = item.Address,
+                        Coordinates = item.Coordinates
+                    };
+                    ret2.Add(er);
+                }
+                return ret2;
+            }
+        }
+
         internal int CheckId()
         {
             var allEquipment = unitOfWork.EquipmentRepository.GetAll();
