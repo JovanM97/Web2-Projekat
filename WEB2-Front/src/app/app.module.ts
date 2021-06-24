@@ -37,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AddEquipmentComponent,
     EquipmentTableComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

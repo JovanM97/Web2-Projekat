@@ -2,9 +2,17 @@
 <app-sidebar></app-sidebar>
 <button routerLink="/addEquipment" class="button" style="height: 50px; width: 100px; margin-left: 190px">Add new +</button>
 <!-- <div style="border: 2px solid black; margin-top: -180px; margin-left: 648px; margin-right: 1035px;white-space: nowrap; display: inline-block;"></div> -->
-
-<button class="button" style="height: 50px; width: 100px; float: right;">Filter</button>
+<button class="button" style="height: 50px; width: 100px; float: right;" (click)="table.filter(mySelect.value, myInput.value)">Filter</button>
+<div style="height: 50px; width: 15px; float: right;"></div>
+<input #myInput type="text" style="height: 30px; width: 100px; float: right;">
+<div style="height: 50px; width: 15px; float: right;"></div>
+<select #mySelect style="height: 35px; width: 100px; float: right; font-size: 20px;">
+    <option value="NAME">Name</option>
+    <option value="TYPE">Type</option>
+    <option value="ADDRESS">Address</option>
+</select>
+<label style="height: 50px; width: 110px; float: right;font-size: 25px;">Filter by:</label>
 
 <div style="margin-left: 150px; margin-top: 10px;">
-    <app-equipment-table></app-equipment-table>
+    <app-equipment-table #table></app-equipment-table>
 </div>

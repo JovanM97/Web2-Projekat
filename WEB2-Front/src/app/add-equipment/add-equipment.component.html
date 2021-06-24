@@ -6,7 +6,7 @@
             <tr>
                 <td>Type: </td>
                 <td>
-                    <select style="width: 220px;" formControlName="Type">
+                    <select #mySelect (change)='onOptionsSelected(mySelect.value)' style="width: 220px;" formControlName="Type">
                         <option value="SWITCH">Switch</option>
                         <option value="FUSE">Fuse</option>
                         <option value="TRANSFORMER">Transformer</option>

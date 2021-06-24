@@ -60,4 +60,18 @@ export class AddEquipmentComponent implements OnInit {
       }
     );
   }
+
+  onOptionsSelected(value:string){
+    console.log("the selected value is " + value);
+    if (value == "SWITCH") {
+      this.type = "SW";
+    } else if (value == "FUSE"){
+      this.type = "FU";
+    } else if (value == "TRANSFORMER"){
+      this.type = "TR";
+    } else if (value == "DISCONNECTOR"){
+      this.type = "DI";
+    }
+    this.name = this.type + this.EqId
+}
 }

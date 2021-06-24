@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EquipmentTableComponent } from '../equipment-table/equipment-table.component';
 
 @Component({
   selector: 'app-equipment-page',
